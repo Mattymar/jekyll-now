@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Why Data Science?
+author: Matt Maresca
+date: April 11, 2017
 ---
 
 It may seem odd to some that someone who has spent the past 10 years working primarily as a personal fitness trainer would pursue a transition into the world of data science.  You may find it even more strange after learning that I also have not received much formal education in mathematics or computer science.  Yet, I’d be willing to wager that by the time you finish reading this post, data science will seem like the natural next step in a man's mission to do some good in this world.  

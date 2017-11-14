@@ -1,0 +1,22 @@
+---
+layout: default
+title: Blog
+---
+
+<div class="posts">
+	<div class="container">
+  		{% for post in site.posts %}
+    	<div class="col-sm-8" style="padding:0;">
+      		<article class="post">
+        		<h3 class="home-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+
+				<div class="entry" style="margin-bottom:20px">
+				{{ post.excerpt }}
+				</div>
+
+          		<a href="{{ site.baseurl }}{{ post.url }}" class="btn btn-brand">Read More</a>
+      		</article>
+    	</div>
+  		{% endfor %}
+  	</div>
+</div>

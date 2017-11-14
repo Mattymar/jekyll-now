@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}</title>
 
     {% include meta.html %}
 
@@ -17,24 +17,27 @@
 
   <body>
     <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+      <div class="container-fluid no-padding">
+        <header class="masthead clearfix" id="main-header">
+          <div class="container">
 
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
+            <div class="site-info">
+              <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+            </div>
+
+            <nav>
+              <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/resume">Résumé</a></li>
+              </ul>
+            </nav>
           </div>
-
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
         </header>
       </div>
     </div>
 
-    <div id="main" role="main" class="container">
+    <div id="main" role="main">
       {{ content }}
     </div>
 

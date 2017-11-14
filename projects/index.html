@@ -1,0 +1,84 @@
+---
+layout: default
+permalink: /projects/
+---
+
+<div id="main" role="main">
+  <div class="container pad50">
+    <article class="page">
+
+      <h1 style="text-align:center;">Projects</h1>
+
+      <div class="entry">
+        <p>This page serves as a portfolio of my projects, including a summary of the project and any appropriate links.  Most projects will have a blog post written about them if they do not already. For a quick exploration of the project, go to its linked GitHub repository and browse the README and/or the project's main Jupyter notebook file.</p>
+
+        <div class="project">
+          <h2>Satellite Image Segmentation</h2>
+          <p><strong>Tags: </strong><em>image segmentation, geospatial, GIS, deep learning, convolutional neural networks</em></p>
+          <div class="col-sm-4 float-left">
+            <img class="d-block img-fluid" src="{{ site.baseurl }}/images/farmland_seg_proj_page.png" alt="Satellite Image Segmentation" style="width:100%;">
+          </div>
+          <div class="col-sm-8 float-left">
+          
+            <p class="small" style="padding-bottom:20px;">Performed semantic segmentation to map farmland in satellite images. The process included cross-referencing open street maps to find images containing farmland using geo-cooridinates, utilizing QGIS software to create ground truth masks, and implementing several convolutional neural networks to train a predictive model. This was my final project at Metis.</p>
+          </div>
+          <a class="btn btn-contrast btn-sm" href="https://github.com/Mattymar/satellite-image-segmentation" target="_blank" role="button">View on Github</a>
+          <a class="btn btn-contrast btn-sm" href="#" role="button">Read Blog Post</a>
+
+          <hr class="my-4">
+        </div>
+
+        <div class="project">
+          <h2>Data Science Resource Suggestion Tool</h2>
+          <p><strong>Tags: </strong><em>Natural Language Processing, unsupervised, web scraping</em></p>
+          <div class="col-sm-4 float-left">
+            <img class="d-block img-fluid" src="{{ site.baseurl }}/images/ds_resource_proj_page.png" alt="Data science resource suggestion tool" style="width:100%;">
+          </div>
+          <div class="col-sm-8 float-left">
+            <p class="small" style="padding-bottom:20px;">Used natural language processing techniques to take an input of a block of text and output a set of recommended blog posts related to the subject. The process included programmatically building a corpus of several thousand blog posts and using a TF-IDF matrix to suggest posts using cosine similarity. The tool was built using Flask.</p>
+          </div>
+          <a class="btn btn-contrast btn-sm" href="https://github.com/Mattymar/ds-resource-recommender" target="_blank" role="button">View on Github</a>
+          <!-- <a class="btn btn-contrast btn-sm" href="#" role="button">Read Blog Post</a> -->
+
+          <hr class="my-4">
+        </div>
+
+        <div class="project">
+          <h2>Bag of Visual Words - Image Classification</h2>
+          <p><strong>Tags: </strong><em>Image classification, image processing, machine learning</em></p>
+          <div class="col-sm-4 float-left">
+            <img class="d-block img-fluid" src="{{ site.baseurl }}/images/bov_proj_page.png" alt="Image classification with Bog of Visual Words" style="width:100%;">
+          </div>
+          <div class="col-sm-8 float-left">
+            <p class="small" style="padding-bottom:20px;">Used old school shallow learning techniques to classify insect images. The technique employed was "Bag of Visual Words" as inspired by the popular NLP technique. The process involved building a set of feature descriptor vectors for each image, building a codebook for all images using KMeans clustering, building a histogram for each image, and finally fitting a support vector classifier.</p>
+          </div>
+          <a class="btn btn-contrast btn-sm" href="https://github.com/Mattymar/image-classification-with-bov" target="_blank" role="button">View on Github</a>
+          <!-- <a class="btn btn-contrast btn-sm" href="#" role="button">Read Blog Post</a> -->
+
+          <hr class="my-4">
+        </div>
+
+        <div class="project">
+          <h2>Baseball Stats Predictor</h2>
+          <p><strong>Tags: </strong><em>Regression, web scraping, feature engineering</em></p>
+          <div class="col-sm-4 float-left">
+            <img class="d-block img-fluid" src="{{ site.baseurl }}/images/baseball_proj_page.png" alt="Baseball stats predictor - Regression" style="width:100%;">
+          </div>
+          <div class="col-sm-8 float-left">
+            <p class="small" style="padding-bottom:20px;">Built a simple regression model to predict baseball stats better than the baseline of using the previous season's stats. In fact, the only data that was used in building the model was data that was minimally affected by the natural randomness in the game. The idea was to prove a concept that the true nature of a player's ability is not inherent in a single season's statistics.</p>
+          </div>
+          <a class="btn btn-contrast btn-sm" href="https://github.com/Mattymar/baseball-stats-predictor" target="_blank" role="button">View on Github</a>
+          <!-- <a class="btn btn-contrast btn-sm" href="#" role="button">Read Blog Post</a> -->
+
+          <hr class="my-4">
+        </div>
+
+        <h3 id="contact-me">Contact me</h3>
+
+        <p>If you have any questions about any of these projects, feel free to reach out to <a href="mailto:mattmaresca@gmail.com">mattmaresca@gmail.com</a></p>
+
+      </div>
+    </article>
+  </div>
+
+</div>

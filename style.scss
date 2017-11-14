@@ -19,7 +19,7 @@ html {
 
 body {
 	background: $white;
-  font: 18px/1.4 $helvetica;
+  font: 18px/1.4 $helveticaNeue !important;
   color: $darkGray;
 }
 
@@ -31,9 +31,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $helveticaNeue;
-  color: $darkerGray;
-  font-weight: bold;
+  font-family: $helveticaNeue !important;
+  font-weight: 300 !important;
 
   line-height: 1.7;
   margin: 1em 0 15px;
@@ -65,7 +64,7 @@ h4 {
 }
 
 p {
-  margin: 15px 0;
+  margin: 24px 0 !important;
 }
 
 a {
@@ -75,6 +74,23 @@ a {
   &:hover, &:active {
     color: $blue;
   }
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+.btn:hover {
+  color: #fff !important;
+}
+
+.btn-brand {
+  background-color: $blueEye;
+  color: #eee;
+}
+
+.btn-brand:hover {
+  background-color: lighten($blueEye, 5%)
 }
 
 ul, ol {
@@ -118,6 +134,7 @@ img {
 .date {
   font-style: italic;
   color: $gray;
+  text-align: center;
 }
 
 // Specify the color of the selection
@@ -142,6 +159,63 @@ img {
     clear: both;
 }
 
+.no-padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.btn-contrast {
+  background: $red;
+  color: #eee;
+}
+
+.center {
+  text-align: center;
+  width: 100%;
+}
+
+.pad50 {
+  padding: 50px 0;
+}
+
+.row.is-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.row.is-flex > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+* And with max cross-browser enabled.
+* Nobody should ever write this by hand. 
+* Use a preprocesser with autoprefixing.
+*/
+.row.is-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.row.is-flex > [class*='col-'] {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
 /*********************/
 /* LAYOUT / SECTIONS */
 /*********************/
@@ -151,11 +225,9 @@ img {
 //
 
 .wrapper-masthead {
-  margin-bottom: 50px;
 }
 
 .masthead {
-  padding: 20px 0;
   border-bottom: 1px solid $lightGray;
 
   @include mobile {
@@ -163,10 +235,16 @@ img {
   }
 }
 
+#main-header {
+    /*background-color: $blueDark; /*#007bc3;*/
+    color: #505050;
+    padding: 10px 0;
+}
+
 .site-avatar {
   float: left;
   width: 70px;
-  height: 70px;
+  height: 30px;
   margin-right: 15px;
 
   @include mobile {
@@ -192,12 +270,13 @@ img {
 
 .site-name {
   margin: 0;
-  color: $darkGray;
+  color: #4c76a4;
   cursor: pointer;
   font-family: $helveticaNeue;
   font-weight: 300;
   font-size: 28px;
   letter-spacing: 1px;
+  text-transform: lowercase;
 }
 
 .site-description {
@@ -212,9 +291,8 @@ img {
 
 nav {
   float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
   font-family: $helveticaNeue;
-  font-size: 18px;
+  font-size: 16px;
 
   @include mobile {
     float: none;
@@ -225,7 +303,7 @@ nav {
 
   a {
     margin-left: 20px;
-    color: $darkGray;
+    color: #505050;
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
@@ -241,14 +319,73 @@ nav {
 // .main
 //
 
-.posts > .post {
-  padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
+.jumbotron {
+  background-color: $blueEye !important;
+  color: #fff;
 }
 
-.posts > .post:last-child {
+.home-jumbobox {
+  background: #ddd;
+  border: 1px solid #8c98a5;
+  border-radius: 5px;
+  color: #505050;
+  padding: 10px;
+}
+
+
+.home-image {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  border: 1px solid #8c98a5;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.carousel {
+  background: rgba(51, 51, 51, 0.3);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+
+.home-title a {
+  color: $blueEye
+}
+
+.posts {
+  overflow: auto;
+}
+
+.post {
+  padding-bottom: 2em;
+  padding-top: 50px;
+  border-bottom: 1px solid $lightGray;
+  font-size: 18px;
+  font-weight: 200;
+}
+
+.post h2 {
+  margin-top: 50px;
+  font-weight: 500 !important;
+}
+
+.post:last-child {
   padding-bottom: 1em;
-  border-bottom: none;
+}
+
+.post-title {
+    text-align: center;
+    color: #444444;
+    margin-bottom: 30px;
+}
+
+.post-meta {
+    text-align: center;
+    color: $gray;
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 30px;
 }
 
 .post {
@@ -270,6 +407,20 @@ nav {
     font-size: 15px;
   }
 }
+
+.resume-row {
+  overflow: auto;
+}
+
+.resume-row:hover {
+  background-color: #e8ffe4;
+  overflow: auto;
+}
+.poem-block {
+  margin-bottom: 30px;
+}
+
+
 
 .wrapper-footer {
   margin-top: 50px;

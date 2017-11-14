@@ -2,17 +2,124 @@
 layout: default
 ---
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
-
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.excerpt }}
+<div class="jumbotron jumbotron-fluid" style="overflow:auto;">
+  <div class="container">
+    <div class="col-sm-8 float-left" style="padding:0;">
+      <h1 class="display-4">For the love of science.</h1>
+      <p class="lead">This site is a dedication to the understanding and recombination of the knowledge in our world...with a little bit of humor sprinkled in.</p>
+      <hr class="my-4">
+      
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active">
+            <div class="col-sm-7 float-left" style="border-radius:5px;">
+              <img class="d-block img-fluid" src="{{ site.baseurl }}/images/farmland_seg_proj_page.png" alt="Third slide" style="width:100%;border-radius:5px;">
+            </div>
+            <div class="col-sm-5 float-left center">
+              <h5>Satellite Image Segmentation</h5>
+              <a class="btn btn-contrast btn-sm" href="https://github.com/Mattymar/satellite-image-segmentation" target="_blank" role="button">View on Github</a>
+              <a class="btn btn-contrast btn-sm" href="{{ site.baseurl }}/Satellite_Image_Segmentation/" role="button">Read Blog Post</a>
+            </div>
+            <div style="clear:both;"></div>
+            <div>
+              <p class="small" style="margin-top:10px !important;padding-bottom:10px;">Performed semantic segmentation to map farmland in satellite images. The process included cross-referencing open street maps to find images containing farmland using geo-cooridinates, utilizing QGIS software to create ground truth masks, and implementing several convolutional neural networks to train a predictive model. This was my final project at Metis.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="col-sm-7 float-left" style="border-radius:5px;">
+              <img class="d-block img-fluid" src="{{ site.baseurl }}/images/ds_resource_proj_page.png" alt="First slide" style="width:100%;border-radius:5px;">
+            </div>
+            <div class="col-sm-5 float-left center">
+              <h5>Data Science Resource Suggestion Tool</h5>
+              <a class="btn btn-contrast btn-sm" href="https://github.com/Mattymar/ds-resource-recommender" target="_blank" role="button">View on Github</a>
+              <!-- <a class="btn btn-contrast btn-sm" href="#" role="button">Read Blog Post</a> -->
+            </div>
+            <div style="clear:both;"></div>
+            <div>
+              <p class="small" style="margin-top:10px !important;padding-bottom:10px;">Used natural language processing techniques to take an input of a block of text and output a set of recommended blog posts related to the subject. The process included programmatically building a corpus of several thousand blog posts and using a TF-IDF matrix to suggest posts using cosine similarity. The tool was built using Flask.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="col-sm-7 float-left" style="border-radius:5px;border-radius:5px;">
+              <img class="d-block img-fluid" src="{{ site.baseurl }}/images/bov_proj_page.png" alt="Second slide" style="width:100%;border-radius:5px;">
+            </div>
+            <div class="col-sm-5 float-left center">
+              <h5>Bag of Visual Words - Image Classification</h5>
+              <a class="btn btn-contrast btn-sm" href="https://github.com/Mattymar/image-classification-with-bov" target="_blank" role="button">View on Github</a>
+              <!-- <a class="btn btn-contrast btn-sm" href="#" role="button">Read Blog Post</a> -->
+            </div>
+            <div style="clear:both;"></div>
+            <div>
+              <p class="small" style="margin-top:10px !important;padding-bottom:10px;">Used old school shallow learning techniques to classify insect images. The technique employed was "Bag of Visual Words" as inspired by the popular NLP technique. The process involved building a set of feature descriptor vectors for each image, building a codebook for all images using KMeans clustering, building a histogram for each image, and finally fitting a support vector classifier.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="col-sm-7 float-left" style="border-radius:5px;">
+              <img class="d-block img-fluid" src="{{ site.baseurl }}/images/baseball_proj_page.png" alt="Baseball stats predictor - Regression" style="width:100%;border-radius:5px;">
+            </div>
+            <div class="col-sm-5 float-left center">
+              <h5>Baseball Stats Predictor</h5>
+              <a class="btn btn-contrast btn-sm" href="https://github.com/Mattymar/baseball-stats-predictor" target="_blank" role="button">View on Github</a>
+              <!-- <a class="btn btn-contrast btn-sm" href="#" role="button">Read Blog Post</a> -->
+            </div>
+            <div style="clear:both;"></div>
+            <div>
+              <p class="small" style="margin-top:10px !important;padding-bottom:10px;">Built a simple regression model to predict baseball stats better than the baseline of using the previous season's stats. In fact, the only data that was used in building the model was data that was minimally affected by the natural randomness in the game. The idea was to prove a concept that the true nature of a player's ability is not inherent in a single season's statistics.</p>
+            </div>
+          </div>
+        </div>
+        <!--<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>-->
       </div>
+      <!--<p>Follow my journey toward the cutting edge of artificial intelligence.</p>
+      <p class="lead">
+        <a class="btn btn-contrast btn-lg" href="#" role="button">More About Matt...</a>
+      </p>-->
+    </div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
+    <div class="col-sm-3 float-right home-jumbobox center">
+      <img class="home-image" src="{{ site.baseurl }}/images/matt-square.jpg" alt="Matt Maresca" />
+      <div class="float-left center">
+        <h4>Matt Maresca</h4>
+        <div class="float-left center"><em>Data Scientist</em></div>
+        <div class="float-left center" style="padding:20px 0;"><em>"We <strong>learn</strong> to solve problems and <strong>understand</strong> to create solutions."</em></div>
+        <div class="float-left center">{% include svg-icons.html %}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="posts">
+  <div class="container">
+  <div class="row is-flex">
+  {% for post in site.posts %}
+    <div class="col-sm-6 float-left">
+      <article class="post card" style="margin:auto;height:100%">
+        <div class="card-body">
+          <h3 class="card-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+
+          <div class="entry" style="margin-bottom:20px">
+            {{ post.excerpt }}
+          </div>
+
+          <a href="{{ site.baseurl }}{{ post.url }}" class="btn btn-brand">Read More</a>
+        </div>
+      </article>
+    </div>
   {% endfor %}
+  </div>
+  <div class="clearfix"></div>
+  </div>
 </div>
