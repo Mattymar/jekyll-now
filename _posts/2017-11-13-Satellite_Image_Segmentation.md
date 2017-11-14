@@ -84,7 +84,7 @@ Perhaps an even more interesting approach that I haven’t yet had the chance to
 
 ## The data
 
-For this project, I utilized images from the SpaceNet dataset taken by Digital Globe’s WorldView-3 satellite.  These images were taken at 30cm resolution, which means that one pixel corresponds to 30cm<sup>2</sup> of actual area.  This is the highest resolution earth observation satellite imagery.  The project was part of a special partnership with Digital Globe and Metis, in which Alan Shoen (Digital Globe employee and Metis alum) provided an introduction to working with the dataset as well as a primer on dealing with the super fun idiosyncracies of geospatial data. 
+For this project, I utilized images from the SpaceNet dataset taken by Digital Globe’s WorldView-3 satellite.  These images were taken at 30cm resolution, which means that one pixel corresponds to 30cm<sup>2</sup> of actual area.  This is the highest resolution earth observation satellite imagery.  The project was part of a special partnership with Digital Globe and Metis, in which Alan Schoen (Digital Globe employee and Metis alum) provided an introduction to working with the dataset as well as a primer on dealing with the super fun idiosyncracies of geospatial data. 
 
 <div class="clearfix"></div>
 
