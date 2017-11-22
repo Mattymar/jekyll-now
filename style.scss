@@ -315,6 +315,11 @@ nav {
   }
 }
 
+.major-block {
+  margin-bottom: 50px;
+  overflow: auto;
+}
+
 //
 // .main
 //
@@ -407,6 +412,19 @@ nav {
     font-size: 15px;
   }
 }
+.res-nav {
+  background-color: $blueEye;
+  width:100%;
+  text-align:center;
+  overflow: auto;
+  padding: 10px 0;
+}
+.res-nav a {
+  color: #eee;
+}
+.res-nav a:hover {
+  color: #fff;
+}
 
 .resume-row {
   overflow: auto;
@@ -417,9 +435,85 @@ nav {
   overflow: auto;
 }
 .poem-block {
+  margin-top: 70px;
   margin-bottom: 30px;
+  padding: 0 !important;
+}
+.poem-block p {
+  margin: 0 !important;
+}
+.poem-collapse.show {
+  display: inline !important;
+}
+.poem-ul {
+  margin: 20px 0;
+}
+#experience {
+  background-color: #eee;
+  padding: 20px;
+}
+.side-block {
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 15px 3px 15px 0;
+  padding: 10px 0;
+  box-shadow: 0 0 2px #505050;
+}
+.side-block button {
 }
 
+#skillz {
+  background-color: $blueEye;
+  padding: 10px;
+  padding-bottom: 50px;
+  color: #eee;
+  border: 1px solid darken($blueEye, 10%);
+}
+.skills-div {
+  float: left;
+  margin: 0;
+  padding: 0 !important;
+  color: #222;
+}
+.skills {
+  list-style: none;
+  color: #111;
+  margin: 0;
+  padding: 0 !important;
+  width: 100%;
+  border: 1px solid #505050;
+}
+.skills li {
+  padding: 0 5px;
+  border-top: 1px solid #505050;
+  border-bottom: 1px solid #505050;
+  font-size: 0.9em;
+}
+.skill-9:hover {
+  background-color: lighten(#bb1313, 10%)
+}
+.skill-9 {
+  background-color: #bb1313;
+  color: #eee;
+}
+.skill-8:hover {
+  background-color: lighten(#ff9900, 10%)
+}
+.skill-8 {
+  background-color: #ff9900;
+}
+.skill-7:hover {
+  background-color: lighten(#f9f926, 20%)
+}
+.skill-7 {
+  background-color: #f9f926;
+}
+.skill-6:hover {
+  background-color: lighten(#0bece2, 10%)
+}
+.skill-6 {
+  background-color: #0bece2;
+}
 
 
 .wrapper-footer {
